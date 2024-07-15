@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions Paper</title>
+    <link rel="stylesheet" href="/static/question.css">
+</head>
+<body>
+    <h1>Questions</h1>
+    <form method="POST" action="{% url 'result' test.id %}">
+        {% csrf_token %}
+        {% for question in questions %}
+            <div>
+                <h3>{{ forloop.counter }}. {{ question.Question }}</h3>
+                <input type="radio" name="question_{{ question.id }}" value="{{ question.Op1 }}" required> {{ question.Op1 }}<br>
+                <input type="radio" name="question_{{ question.id }}" value="{{ question.Op2 }}" required> {{ question.Op2 }}<br>
+                <input type="radio" name="question_{{ question.id }}" value="{{ question.Op3 }}" required> {{ question.Op3 }}<br>
+                <input type="radio" name="question_{{ question.id }}" value="{{ question.Op4 }}" required> {{ question.Op4 }}<br>
+                <div></div>
+            </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

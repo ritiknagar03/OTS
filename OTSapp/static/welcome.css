@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.img{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/static/landingPage_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    height: 100%;
+
+}
+
+.info h1{
+    color: #0d6efd;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    word-spacing: 10px;
+    letter-spacing: 10px;
+    text-shadow: 11px 13px 4px black;
+}
+.info p{
+    width: 50%;
+    color: #ffda07;
+    font-size: 20px;
+}
+
+.buttons{
+    display: flex;
+    gap: 25px;
+    padding: 5px;
+}
+
+.btn{
+    background-color: white;
+    color: #0d6efd;
+    border-color: #0d6efd;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 1px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    transition:background-color 1s, color 1s ;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: #0d6efd;
+    color: white;
+}
+.btn:active{
+    opacity: 0.7;
+}
