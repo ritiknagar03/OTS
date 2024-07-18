@@ -32,7 +32,6 @@ body{
     font-weight: bolder;
     word-spacing: 10px;
     letter-spacing: 10px;
-    text-shadow: 11px 13px 4px black;
 }
 .info p{
     width: 50%;
@@ -67,4 +66,20 @@ body{
 }
 .btn:active{
     opacity: 0.7;
+}
+
+@media screen and (max-width: 520px) {
+    .info h1{
+        color: #0d6efd;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        word-spacing: 5px;
+        letter-spacing: 5px;
+    }
+    .info p{
+        width: 70%;
+        color: #ffda07;
+        font-size: 16px;
+    }
 }
